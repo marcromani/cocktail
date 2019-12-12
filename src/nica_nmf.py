@@ -119,7 +119,7 @@ def whiten(X, num_components=None, center=True, rowvar=True):
     return Z, V
 
 
-def non_negative_ICA(X, num_sources, lr=0.03, max_iter=5000, tol=1e-8, rowvar=True):
+def nica(X, num_sources, lr=0.03, max_iter=5000, tol=1e-8, rowvar=True):
     """Compute the non-negative independent components of the linear generative model x = A * s.
 
     Here, x is a p-dimensional observable random vector and s is the latent random vector
@@ -212,7 +212,7 @@ def non_negative_ICA(X, num_sources, lr=0.03, max_iter=5000, tol=1e-8, rowvar=Tr
     return Y, WV_
 
 
-def NICA_NMF(X, num_components, lr=0.03, max_iter=5000, tol=1e-8, rowvar=True):
+def nica_nmf(X, num_components, lr=0.03, max_iter=5000, tol=1e-8, rowvar=True):
     """Non-negative matrix factorization with non-negative ICA (NICA) initialization.
 
     Under the linear generative model x = A * s, where x is a p-dimensional observable
@@ -244,7 +244,7 @@ def NICA_NMF(X, num_components, lr=0.03, max_iter=5000, tol=1e-8, rowvar=True):
         (S.T, A) if rowvar == False.
 
     """
-    S, A = non_negative_ICA(X, num_components, lr, max_iter, tol, rowvar)
+    S, A = nica(X, num_components, lr, max_iter, tol, rowvar)
 
     # We assume rowvar is True throughout the algorithm
     if not rowvar:
