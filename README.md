@@ -1,2 +1,2 @@
-# nica-nmf
-Non-negative matrix factorization with non-negative ICA (NICA) initialization
+# cocktail
+A blind source separation package using non-negative matrix factorization and non-negative ICA.
