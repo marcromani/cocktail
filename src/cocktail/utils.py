@@ -1,5 +1,6 @@
-import numpy as np
 import random
+
+import numpy as np
 
 
 def _lstsq_vector(A, b, constraints=None):
@@ -68,7 +69,7 @@ def _lstsq_matrix(X, Y, constraints=None):
 
     Args:
         X: Input matrix.
-        Y: Output matrix. 
+        Y: Output matrix.
         constraints: Constraint matrix.
 
     Returns:
