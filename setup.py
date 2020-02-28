@@ -12,6 +12,6 @@ setup(
     author='Marc Romaní',
     author_email='marcromani.ub@gmail.com',
     package_dir={'': 'src'},
-    packages=find_packages(),
+    packages=find_packages(where='src'),
     install_requires=['scikit-learn']
 )
