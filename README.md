@@ -1,2 +1,2 @@
 # cocktail
-A blind source separation package using non-negative matrix factorization and non-negative ICA.
+A blind source separation package providing non-negative matrix factorization and non-negative ICA.
